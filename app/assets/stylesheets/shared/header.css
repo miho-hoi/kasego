@@ -1,0 +1,76 @@
+.header {
+  width: 100vw;
+  height: 120px;
+  background-color: #00803d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fffded;
+  padding-left: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header_right {
+  display: flex;
+  color: #fffded;
+}
+
+.user_nickname {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'M PLUS Rounded 1c';
+  color: #fffded;
+}
+
+.header_right_button > a {
+  margin-right: 30px;
+  padding: 10px;
+  font-size: 25px;
+  font-family: "M PLUS Rounded 1c";
+  background-color: #fffded;
+  color: #00803d;
+  border-radius: 5px;
+}
+
+.copyright {
+  background-color: #00803d;
+  font-size: 15px;
+  color: #fffded;
+  text-align: center;
+}
+
+/* タブレット表示時 */
+@media (max-width: 767.98px) {
+
+  .logo > a {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fffded;
+    padding-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+    
+  .header_right_button > a {
+    margin-right: 30px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "M PLUS Rounded 1c";
+    background-color: #fffded;
+    color: #00803d;
+    border: 1px solid #fffded;
+    border-radius: 5px;
+  }
+  
+  .copyright {
+    width: 100vw;
+    background-color: #00803d;
+    font-size: 10px;
+    color: #fffded;
+    text-align: center;
+  }
+}
