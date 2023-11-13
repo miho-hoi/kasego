@@ -74,3 +74,11 @@ end
 group :production do
   gem 'pg'
 end
+
+gem "devise"
+gem "pry-rails"
+gem 'rails-i18n'
+gem 'devise-i18n'
+gem 'rspec-rails'
+gem 'factory_bot_rails'
+gem 'faker'

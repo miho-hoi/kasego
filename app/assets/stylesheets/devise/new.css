@@ -1,0 +1,86 @@
+.form_wrap {
+  width:600px;
+  height: fit-content;
+  margin: 50px auto 30px;
+  border: 1px solid #626343;
+}
+
+.form_header {
+  height: 50px;
+  background-color: #626343;
+}
+
+.form_header_text {
+  font-size: 40px;
+  font-family: "M PLUS Rounded 1c";
+  color: #fffded;
+  text-align: center;
+}
+.links {
+  width: 200px;
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
+
+.field {
+  margin: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
+
+.form_field {
+  border: 1px solid #626343;
+  border-radius: 5px;
+  line-height: 40px;
+}
+
+.actions {
+  width: 200px;
+  margin: 50px auto;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  color: #fffded;
+  border: 1px none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #beb098;
+}
+
+.return {
+  width: fit-content;
+  margin: auto;
+  font-size: 20px;
+  color: #626343;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.error_message {
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  color: #f4b2ba;
+  margin-left: 10px;
+}
+
+.alert {
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  color: #f4b2ba;
+}
+
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+  .form_wrap {
+    width:400px;
+    height: fit-content;
+    margin: 100px auto;
+    border: 1px solid #626343;
+  }
+ }
