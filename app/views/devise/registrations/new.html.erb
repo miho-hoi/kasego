@@ -1,0 +1,40 @@
+<div class="form_wrap">
+  <div class="form_header">
+    <h2 class="form_header_text">新規登録</h2>
+  </div>
+  
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :nickname %><br />
+      <div class="form_field"><%= f.text_field :nickname, autofocus: true %></div>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <div class="form_field"><%= f.email_field :email, autocomplete: "email" %></div>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> 文字以上)</em><br />
+      <% end %>
+      <div class="form_field"><%= f.password_field :password, autocomplete: "new-password" %></div>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <div class="form_field"><%= f.password_field :password_confirmation, autocomplete: "new-password" %></div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "新規登録する" %>
+    </div>
+  <% end %>
+</div>
+<div class="return">
+  <%= link_to "戻る", root_path%>
+</div>
