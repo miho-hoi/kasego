@@ -1,24 +1,52 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+|Column   |Type   |Option      |
+|---------|-------|------------|
+|nickname |string |null: false |
+|email    |string |null: false |
+|password |string |null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :records 
+- has_many :payments
 
-* Configuration
+## to_dosテーブル
 
-* Database creation
+|Column   |Type    |Option                   |
+|---------|--------|-------------------------|
+|content  |string  |null: false, unique:true |
+|price    |integer |null: false              |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :to_dos
 
-* Services (job queues, cache servers, search engines, etc.)
+## recordテーブル
 
-* Deployment instructions
+|Column     |Type       |Option                         |
+|---------|-----------|-------------------------------|
+|date     |date       |null: false                    |
+|times    |integer    |null: false                    |
+|to_do_id |references |null: false                    |
+|user-id  |references |null: false, foreign_key: true |
 
-* ...
+### Association
+- belongs_to :user
+- belongs_to :to_do
+- has_one : payment
+
+## paymentsテーブル
+
+|Column      |Type       |Option                         |
+|------------|-----------|-------------------------------|
+|date        |date       |null: false                    |
+|total_price |integer    |null: false                    |
+|user_id     |references |null: false, foreign_key: true |
+|to_do_id    |references |null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :record
