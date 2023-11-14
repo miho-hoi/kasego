@@ -1,13 +1,41 @@
 <%= render "shared/header" %>
+<div class="wrapper">
   <div class="side_bar_area">
     <ul class="lists">
     <% if user_signed_in? %>
-      <li class="list"><%= link_to "やることを登録する", (new_to_do_path) %></li>
-      <li class="list"><%= link_to "やることリストを見る", (to_dos_path) %></li>
-      <li class="list"><%= link_to "やったことを記録する", ("#") %></li>
-      <li class="list"><%= link_to "みんなの記録を見る", ("#") %></li>
+      <li class="list"><%= link_to "やることリスト", (to_dos_path) %></li>
+      <li class="list"><%= link_to "やることを登録", (new_to_do_path) %></li>
+      <li class="list"><%= link_to "やったことを記録", (new_record_path) %></li>
+      <li class="list"><%= link_to "みんなの記録", ("#") %></li>
     <% end %>
     </ul>
   </div>
 
+  <div class="main_area">
+    <div class="main_area_top">
+      <% if user_signed_in? %>
+        <div class="total_price"><%= @today_month %>月の合計金額は<span class="prices"><%=@user_total_prices_month %>円</span>です！</div>
+      <% else %>
+        <div class="greeting">ログインしてください</div>
+      <% end %> 
+    </div>
+
+    <% if user_signed_in? %>
+      <div class="to-dos_records_wrapper">
+        <% @records.each do |record| %>
+        <div class="to_dos_records">
+            <% if record.user_id == current_user.id && record.date.month == @today_month %> 
+            <div class="to_dos_record_date"><%= record.date.strftime('%m/%e') %></div>
+            <div class="to_dos_record_content"><%= record.to_do.content %></div>
+            <div class="to_dos_record_price"><%= record.to_do.price %>円 x <%= record.times %>=<%= record.to_do.price * record.times %>円</div>
+            <div class="record_btn"><%= link_to "修正", edit_record_path(record.id) %></div>
+            <div class="record_btn"><%= link_to "削除", record_path(record.id),data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %></div>
+            <% end %>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
 <%= render "shared/footer" %>

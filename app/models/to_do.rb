@@ -3,4 +3,8 @@ class ToDo < ApplicationRecord
 
   validates :content, presence: true, uniqueness: true
   validates :price, presence: true
+
+  def content_price
+    "#{content} - #{price}円"
+  end
 end

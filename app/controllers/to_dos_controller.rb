@@ -1,6 +1,6 @@
 class ToDosController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :set_to_do, only: [:edit, :update]  
   def index
     @to_dos = ToDo.all.order(created_at: :DESC)
   end
@@ -19,11 +19,9 @@ class ToDosController < ApplicationController
   end
 
   def edit
-    @to_do = ToDo.find(params[:id])
   end
 
   def update
-    @to_do = ToDo.find(params[:id])
     if @to_do.update(to_do_params)
       redirect_to to_dos_path
     else
@@ -35,5 +33,9 @@ class ToDosController < ApplicationController
 
   def to_do_params
     params.require(:to_do).permit(:content, :price )
+  end
+
+  def set_to_do
+    @to_do = ToDo.find(params[:id])
   end
 end
