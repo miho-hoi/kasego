@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_13_194604) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_13_213600) do
   create_table "records", charset: "utf8mb4", force: :cascade do |t|
     t.date "date", null: false
     t.integer "times", null: false
@@ -20,6 +20,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_13_194604) do
     t.datetime "updated_at", null: false
     t.index ["to_do_id"], name: "index_records_on_to_do_id"
     t.index ["user_id"], name: "index_records_on_user_id"
+  end
+
+  create_table "to_dos", charset: "utf8mb4", force: :cascade do |t|
+    t.string "content", null: false
+    t.integer "price", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|

@@ -1,0 +1,16 @@
+ja:
+  date:
+    formats:
+      default: "%Y年%m月%d日"
+      day_names: [日, 月, 火, 水, 木, 金, 土]
+
+  activerecord:
+    attributes:
+      record:
+        date: 日付
+        to_do: やったこと
+        times: 回数
+      to_do:
+        content: やること
+        price: 金額 
+

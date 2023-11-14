@@ -38,6 +38,7 @@
 }
 
 .copyright {
+  width: 100vw;
   background-color: #00803d;
   font-size: 15px;
   color: #fffded;

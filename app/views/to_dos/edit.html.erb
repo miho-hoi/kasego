@@ -1,0 +1,22 @@
+<div class="form_wrap">
+  <div class="form_header">
+    <h2 class="form_header_text">やることリストを編集する</h2>
+  </div>
+  <%= form_with model: @to_do, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="field">
+      <%= f.label :content %><br />
+      <div class="form_field"><%= f.text_field :content, autofocus: true, placeholder: "(例)おふろをわかす" %></div>
+    </div>
+    <div class="field">
+      <%= f.label :price %><br />
+      <div class="form_field"><%= f.number_field :price, in: 10..1000, step: 10, style: "width:100%", placeholder: "金額を半角数字で入力してください" %></div>
+    </div>
+    <div class="actions">
+      <%= f.submit "内容を編集する" %>
+    </div>
+  <% end %>
+</div>
+<div class="return">
+  <%= link_to "戻る", root_path %>
+</div>
