@@ -1,4 +1,6 @@
 class ToDosController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @to_dos = ToDo.all
   end
