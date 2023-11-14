@@ -1,6 +1,7 @@
 class ToDosController < ApplicationController
   before_action :authenticate_user!
   before_action :set_to_do, only: [:edit, :update]  
+
   def index
     @to_dos = ToDo.all.order(created_at: :DESC)
   end
