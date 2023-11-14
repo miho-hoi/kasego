@@ -1,0 +1,24 @@
+<div class="to_do_wrapper">
+  <div class="to_do_head">やることリスト</div>
+  <% if @to_dos.nil? || @to_dos.empty? %>
+    <div class="to_do_sample">やることを登録してください</div>
+    <div class="to_do_list">
+      <div class="to_do_content_sample">(例)30分勉強をする</div>
+      <div class="to_do_price_sample">100円</div>
+    </div>
+  <% else %>
+    <% @to_dos.each do |to_do| %>
+      <div class="to_do_list">
+        <div class="to_do_content"><%= to_do.content %></div>
+        <div class="to_do_price"><%= to_do.price %>円</div>
+        <div class="edit_btn">
+          <%= link_to '編集', edit_to_do_path(to_do.id) %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="return">
+  <%= link_to "戻る", root_path %>
+</div>

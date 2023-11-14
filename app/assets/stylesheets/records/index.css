@@ -1,0 +1,99 @@
+.wrapper {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+}
+
+.side_bar_area {
+  width: 280px;
+  min-height: 700px;
+  background-color: #cee7d7;
+}
+
+.lists {
+ padding-top: 30px;
+}
+
+.list {
+  margin: 0 30px 30px 20px;
+  padding: 10px;
+  font-size: 20px;
+  color: #626343;
+  font-family: 'M PLUS Rounded 1c';
+}
+
+.main_area_top{
+  width: fit-content;
+  height: fit-content;
+  margin: 20px 0 0 20px;
+  
+}
+
+.greeting { 
+  width: calc(100vw - 250px);
+  text-align: center;
+  font-size: 30px;
+  font-family: 'M PLUS Rounded 1c';
+  color: #f4b2ba;
+}
+
+.total_price {
+  width: calc(100vw - 250px);
+  text-align: center;
+  font-size: 30px;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
+
+.prices {
+  margin: 0 10px;
+  font-size: 40px;
+  font-family: "M PLUS Rounded 1c";
+  font-weight: 900;
+  color: #f4b2ba;
+}
+
+.top_today {
+  margin: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
+
+.top_content {
+  width: calc(100vw - 250px);
+}
+
+.calendar_area {
+  width: 80vw;
+  margin: 50px;
+}
+
+.total_price_by_date {
+  font-size: 20px;
+  color: #626343;
+  text-align: center;
+}
+
+
+.to-dos_records_wrapper {
+  margin-left: 50px;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
+
+.to_dos_records {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.to_dos_record_date {
+  width: 100px;
+}
+
+.to_dos_record_content {
+  width: 20vw;
+  max-width: 200px;
+}

@@ -1,0 +1,77 @@
+.to_do_wrapper {
+  width: 600px;
+  margin: 70px auto 30px;
+  border: 1px solid #626343;
+
+}
+
+.to_do_head {
+  text-align: center;
+  font-size: 40px;
+  font-family: "M PLUS Rounded 1c";
+  color: #fffded;
+  background-color: #626343;
+}
+
+.to_do_list {
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  background-color: #fffded;
+}
+
+.to_do_content {
+  width: 70%;
+  margin: 0 30px 10px;
+  font-size: 30px;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
+
+.to_do_price {
+  width: 30%;
+  text-align: right;
+  margin: 0 30px 10px;
+  font-size: 30px;
+  font-family: "M PLUS Rounded 1c";
+  color: #f4b2ba;
+}
+
+.edit_btn {
+  width: 100px;
+  margin: 0 10px 5px 0;
+  padding: 5px;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  color: #fffded;
+  border: 1px none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #beb098;
+}
+
+.to_do_sample {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 25px;
+  font-family: "M PLUS Rounded 1c";
+  color: #f4b2ba;
+  background-color: #fffded;
+}
+
+.to_do_content_sample {
+  width: 70%;
+  margin: 0 30px 10px;
+  font-size: 25px;
+  font-family: "M PLUS Rounded 1c";
+  color: lightgray;
+}
+
+.to_do_price_sample {
+  width: 30%;
+  text-align: right;
+  margin: 0 30px 10px;
+  font-size: 30px;
+  font-family: "M PLUS Rounded 1c";
+  color: lightgrey;
+}

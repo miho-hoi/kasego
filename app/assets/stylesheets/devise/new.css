@@ -75,12 +75,18 @@
   color: #f4b2ba;
 }
 
- /* スマホ表示時 */
  @media (max-width: 599px) {
   .form_wrap {
     width:400px;
     height: fit-content;
     margin: 100px auto;
     border: 1px solid #626343;
+  }
+  .form_header_text {
+    padding: 5px;
+    font-size: 30px;
+    font-family: "M PLUS Rounded 1c";
+    color: #fffded;
+    text-align: center;
   }
  }
