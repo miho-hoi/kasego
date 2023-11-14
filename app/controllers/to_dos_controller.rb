@@ -1,6 +1,8 @@
 class ToDosController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
-    @to_dos = ToDo.all
+    @to_dos = ToDo.all.order(created_at: :DESC)
   end
 
   def new

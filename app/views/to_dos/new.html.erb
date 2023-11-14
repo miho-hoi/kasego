@@ -1,12 +1,12 @@
 <div class="form_wrap">
   <div class="form_header">
-    <h2 class="form_header_text">やることリストを作る</h2>
+    <h2 class="form_header_text">やることを登録する</h2>
   </div>
   <%= form_with model: @to_do,local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
     <div class="field">
       <%= f.label :content %><br />
-      <div class="form_field"><%= f.text_field :content, autofocus: true, placeholder: "(例)おふろをわかす" %></div>
+      <div class="form_field"><%= f.text_field :content, autofocus: true, placeholder: "(例)ふろをわかす" %></div>
     </div>
     <div class="field">
       <%= f.label :price %><br />
