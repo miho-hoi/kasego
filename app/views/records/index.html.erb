@@ -19,7 +19,19 @@
         <div class="greeting">ログインしてください</div>
       <% end %> 
     </div>
-
+    <div class="calendar_area">
+      <%= month_calendar do |date| %>
+        <%= date.day %>
+        <% if user_signed_in? %>
+          <% total_price = current_user.records.joins(:to_do).where(date: date).sum('to_dos.price * times') %>
+          <% if total_price > 0 %>
+            <div class="total_price_by_date">
+              <%= total_price %>円
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
     <% if user_signed_in? %>
       <div class="to-dos_records_wrapper">
         <% @records.each do |record| %>
