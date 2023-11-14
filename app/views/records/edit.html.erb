@@ -1,0 +1,26 @@
+<div class="form_wrap">
+  <div class="form_header">
+    <h2 class="form_header_text">やったことを修正する</h2>
+  </div>
+  <%= form_with(model: @record, local: true) do|f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+    <div class="field">
+      <%= f.label :date %><br />
+      <div class="form_field"><%= f.date_field :date, value: Date.today, style: "width:100%", autofocus: true %></div>
+    </div>
+    <div class="field">
+      <%= f.label :to_do %><br />
+      <div class="form_field"><%= f.collection_select(:to_do_id, ToDo.all, :id, :content_price, { prompt: "選択してください" }, { style: "width:100%" }) %></div>
+    </div>
+    <div class="field">
+      <%= f.label :times %><br />
+      <div class="form_field"><%= f.number_field :times, in: 1..10, style: "width:100%", placeholder: "半角数字を入力してください" %></div>
+    </div>
+    <div class="actions">
+      <%= f.submit "修正する" %>
+    </div>
+  <% end %>
+</div>
+<div class="return">
+  <%= link_to "戻る", root_path %>
+</div>

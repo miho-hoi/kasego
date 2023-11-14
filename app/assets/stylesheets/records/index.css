@@ -78,7 +78,7 @@
 
 
 .to-dos_records_wrapper {
-  margin-left: 50px;
+  margin: 20px 50px;
   font-size: 20px;
   font-family: "M PLUS Rounded 1c";
   color: #626343;
@@ -90,10 +90,26 @@
 }
 
 .to_dos_record_date {
-  width: 100px;
+  width: 10vw;
 }
 
 .to_dos_record_content {
-  width: 20vw;
+  width: 25vw;
   max-width: 200px;
+}
+
+.to_dos_record_price{
+  width: 15vw;
+}
+
+.record_btn {
+  margin: 0 10px 5px 0;
+  padding: 5px;
+  font-size: 15px;
+  font-family: "M PLUS Rounded 1c";
+  color: #fffded;
+  border: 1px none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #beb098;
 }
