@@ -6,16 +6,14 @@
     background: #fdf5f9;
     color: red;
   }
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
+
   .wday-6 {
     background: #f3f9fd;
     color: blue;
   }
-  .today {}
+  .today {
+    
+  }
   .past {}
   .future {}
   .start-date {}
