@@ -43,9 +43,8 @@
 |Column      |Type       |Option                         |
 |------------|-----------|-------------------------------|
 |date        |date       |null: false                    |
-|total_price |integer    |null: false                    |
 |user_id     |references |null: false, foreign_key: true |
-|to_do_id    |references |null: false, foreign_key: true |
+|record_id   |references |null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
