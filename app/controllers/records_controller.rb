@@ -2,6 +2,7 @@ class RecordsController < ApplicationController
   before_action :move_to_index, except: [:index]
 
   def index
+    @user = User.all
     @today_month = Date.today.month
     if user_signed_in?
       @user_total_prices_month = current_user.records.joins(:to_do).where('EXTRACT(MONTH FROM records.date) = ?', @today_month).sum('to_dos.price * times')
@@ -38,8 +39,8 @@ class RecordsController < ApplicationController
   end
 
   def update
-    if record = Record.find(params[:id])
-      record.update(record_params)
+    @record = Record.find(params[:id])
+    if @record.update(record_params)
       redirect_to root_path
     else
       render :edit, status: :unprocessable_entity
@@ -50,7 +51,7 @@ class RecordsController < ApplicationController
 
   def move_to_index
     unless user_signed_in?
-      redirect_to action: :index
+      redirect_to root_path
     end
   end
 

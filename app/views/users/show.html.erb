@@ -1,0 +1,35 @@
+<%= render "shared/header" %>
+<div class="wrapper">
+  <div class="ontehr_user_side_bar_area">
+    <div class="other_users_return_btn"><%= link_to "トップページに<br>戻る".html_safe,root_path %></div>
+  </div>
+  <div class="main_area">
+    <div class="main_area_top">
+      <div class="total_price"><%= @nickname %>さんの<%= @today_month %>月の合計金額は<span class="prices"><%=@user_total_prices_month %>円</span>です！
+      </div>
+    </div>
+    <div class="calendar_area">
+      <%= month_calendar do |date| %>
+        <%= date.day %>
+        <% total_price = @user.records.joins(:to_do).where(date: date).sum('to_dos.price * times') %>
+        <% if total_price > 0 %>
+          <div class="total_price_by_date">
+            <%= total_price %>円
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="to-dos_records_wrapper">
+      <% @records.each do |record| %>
+      <div class="to_dos_records">
+          <% if record.user_id == @user.id && record.date.month == @today_month %> 
+          <div class="to_dos_record_date"><%= record.date.strftime('%m/%e') %></div>
+          <div class="to_dos_record_content"><%= record.to_do.content %></div>
+          <div class="to_dos_record_price"><%= record.to_do.price %>円 x <%= record.times %>=<%= record.to_do.price * record.times %>円</div>
+          <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
