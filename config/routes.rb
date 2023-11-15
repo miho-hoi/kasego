@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "records#index"
   resources :to_dos, except: [:show, :destroy]
   resources :records, except: :show
+  resources :users, only: :show
 end

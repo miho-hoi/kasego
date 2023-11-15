@@ -5,7 +5,7 @@
 }
 
 .side_bar_area {
-  width: 280px;
+  width: 20vw;
   min-height: 700px;
   background-color: #cee7d7;
 }
@@ -15,10 +15,18 @@
 }
 
 .list {
-  margin: 0 30px 30px 20px;
+  margin: 0 30px 20px 20px;
   padding: 10px;
   font-size: 20px;
   color: #626343;
+  font-family: 'M PLUS Rounded 1c';
+}
+
+.other_users {
+  margin: 0 0 15px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #00803d;
   font-family: 'M PLUS Rounded 1c';
 }
 
@@ -26,7 +34,6 @@
   width: fit-content;
   height: fit-content;
   margin: 20px 0 0 20px;
-  
 }
 
 .greeting { 
