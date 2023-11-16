@@ -18,10 +18,10 @@ RSpec.describe Record, type: :model do
         expect(@record.errors.full_messages).to include('日付を入力してください') 
       end
 
-      it '翌日以降の日付が入力されている' do
+      it '当日以外の日付が選択されている' do
         @record.date = Date.today + 1
         @record.valid?
-        expect(@record.errors.full_messages).to include('日付は今日以前の日付を選択してください')
+        expect(@record.errors.full_messages).to include('日付は当日以外は登録できません')
       end
 
       it 'やったことが入力されていない' do

@@ -5,13 +5,11 @@ class Record < ApplicationRecord
   validates :date,  presence: true
   validates :times, presence: true
 
-  validate :date_cannot_be_in_the_future
-  
+  validate :date_should_be_today
+
   private
 
-  def date_cannot_be_in_the_future
-    if date.present? && date > Date.today
-      errors.add(:date, "は今日以前の日付を選択してください")
-    end
+  def date_should_be_today
+    errors.add(:date, "は当日以外は登録できません") unless date == Date.today
   end
 end

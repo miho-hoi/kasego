@@ -20,6 +20,10 @@
   color: #fffded;
 }
 
+.nickname {
+  margin-right: 15px;
+}
+
 .user_nickname {
   font-size: 30px;
   font-weight: 800;

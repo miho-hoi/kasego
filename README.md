@@ -26,7 +26,7 @@
 
 ## recordテーブル
 
-|Column     |Type       |Option                         |
+|Column   |Type       |Option                         |
 |---------|-----------|-------------------------------|
 |date     |date       |null: false                    |
 |times    |integer    |null: false                    |
@@ -36,16 +36,15 @@
 ### Association
 - belongs_to :user
 - belongs_to :to_do
-- has_one : payment
 
 ## paymentsテーブル
 
 |Column      |Type       |Option                         |
 |------------|-----------|-------------------------------|
 |date        |date       |null: false                    |
+|total_price |integer    |null: false                    |
 |user_id     |references |null: false, foreign_key: true |
-|record_id   |references |null: false, foreign_key: true |
+
 
 ### Association
 - belongs_to :user
-- belongs_to :record

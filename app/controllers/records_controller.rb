@@ -1,11 +1,15 @@
 class RecordsController < ApplicationController
   before_action :move_to_index, except: [:index]
+  before_action :set_beginning_of_week
 
   def index
     @user = User.all
     @today_month = Date.today.month
+    @prev_month = Date.today.prev_month.month
+    @payments = Payment.all
     if user_signed_in?
       @user_total_prices_month = current_user.records.joins(:to_do).where('EXTRACT(MONTH FROM records.date) = ?', @today_month).sum('to_dos.price * times')
+      @user_total_prices_prv_month = current_user.records.joins(:to_do).where('EXTRACT(MONTH FROM records.date) = ?', @prev_month).sum('to_dos.price * times')
       @records = current_user.records.where("EXTRACT(MONTH FROM date) = ?", @today_month).order(date: "DESC")
     else
       @user_total_prices_month = {}
@@ -57,5 +61,9 @@ class RecordsController < ApplicationController
 
   def record_params
     params.require(:record).permit(:date, :to_do_id, :times).merge(user_id: current_user.id)
+  end
+
+  def set_beginning_of_week
+    Date.beginning_of_week = :sunday
   end
 end

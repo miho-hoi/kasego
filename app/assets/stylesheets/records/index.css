@@ -15,7 +15,7 @@
 }
 
 .list {
-  margin: 0 30px 20px 20px;
+  margin: 20px 30px 0 20px;
   padding: 10px;
   font-size: 20px;
   color: #626343;
@@ -23,17 +23,45 @@
 }
 
 .other_users {
-  margin: 0 0 15px 30px;
+  margin: 0 0 15px 20px;
   font-size: 20px;
   font-weight: 600;
   color: #00803d;
   font-family: 'M PLUS Rounded 1c';
 }
 
+.other_user_nil {
+  margin: 0 0 15px 30px;
+  font-size: 15px;
+  color: #00803d;
+  font-family: 'M PLUS Rounded 1c';
+}
 .main_area_top{
   width: fit-content;
   height: fit-content;
   margin: 20px 0 0 20px;
+}
+
+.receipt {
+  width: calc(100vw - 250px);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'M PLUS Rounded 1c';
+  color: #e61639;
+}
+
+.receipt_btn{
+width: fit-content;
+margin: 30px auto;
+padding: 5px;
+font-size: 20px;
+font-family: "M PLUS Rounded 1c";
+color: #fffded;
+border: 1px none;
+border-radius: 5px;
+text-align: center;
+background-color: #626343;
 }
 
 .greeting { 
@@ -60,12 +88,21 @@
   color: #f4b2ba;
 }
 
-.top_today {
-  margin: 20px;
-  font-size: 30px;
-  font-weight: 600;
+.prev_total_price{
+  width: calc(100vw - 250px);
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
   font-family: "M PLUS Rounded 1c";
   color: #626343;
+}
+
+.prev_prices {
+  margin: 0 10px;
+  font-size: 30px;
+  font-family: "M PLUS Rounded 1c";
+  font-weight: 900;
+  color: #beb098;
 }
 
 .top_content {
@@ -101,8 +138,8 @@
 }
 
 .to_dos_record_content {
-  width: 25vw;
-  max-width: 200px;
+  width: 40vw;
+  max-width: 300px;
 }
 
 .to_dos_record_price{

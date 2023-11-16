@@ -1,8 +1,7 @@
 FactoryBot.define do
-  factory :record do
+  factory :payment do
     date { Faker::Date.between(from: Date.today, to: Date.today) }
-    times {Faker::Number.between(from: 1, to: 10)}
+    total_price { Faker::Number.between(from: 10, to: 5000)}
     association :user
-    association :to_do
   end
 end
