@@ -3,11 +3,11 @@
   <div class="side_bar_area">
     <ul class="lists">
     <% if user_signed_in? %>
-      <li class="list"><%= link_to "やること<br>リスト".html_safe, (to_dos_path) %></li>
       <li class="list"><%= link_to "やることを<br>登録".html_safe, (new_to_do_path) %></li>
+      <li class="list"><%= link_to "やること<br>リスト".html_safe, (to_dos_path) %></li>
       <li class="list"><%= link_to "やったことを<br>記録".html_safe, (new_record_path) %></li>
-      <li class="list"><%= link_to "今までの<br>合計金額".html_safe, (payments_path) %></li>
-      <li class="list_other_user"><みんなの記録></li>
+      <li class="list"><%= link_to "先月までの<br>合計金額".html_safe, (payments_path) %></li>
+      <li class="list_other_user">-みんなの記録-</li>
     </ul>
       <div class="other_users_list">
       <% @user.each do |user| %>
@@ -24,15 +24,15 @@
   <div class="main_area">
     <div class="main_area_top">
       <% if user_signed_in? && current_user.payments.where(date: Date.today.beginning_of_month..Date.today.end_of_month).empty? && @user_total_prices_prv_month != 0 %>
-        <div class="receipt">おこづかいを受け取って先月の合計金額を記録してください
-           <div class="receipt_btn"><%= link_to "先月のおこづかいを記録する", new_payment_path %></div>
+        <div class="receipt">先月の合計金額を記録してください
+           <div class="receipt_btn"><%= link_to "先月の合計金額を記録", new_payment_path %></div>
         </div>
       <% end %>
       <% if user_signed_in? %>
       <div class="prev_total_price"><%= "#{@prev_month}月の合計金額は"%><span class="prev_prices"><%= @user_total_prices_prv_month %>円</span>でした</div>
         <div class="total_price"><%= "#{@today_month}月の合計金額は"%><span class="prices"><%= @user_total_prices_month %>円</span>です！</div>
       <% else %>
-        <div class="greeting">ログインしてください</div>
+        <div class="greeting">新規登録かログインをしてください</div>
       <% end %> 
     </div>
     <div class="calendar_area">

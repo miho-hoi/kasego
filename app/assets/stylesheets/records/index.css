@@ -11,37 +11,47 @@
 }
 
 .lists {
- padding-top: 30px;
+ padding-top: 25px;
 }
 
 .list {
   margin: 20px 30px 0 20px;
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
-  color: #626343;
+  color: #00803d;
   font-family: 'M PLUS Rounded 1c';
+  border: 1px ;
+  border-radius: 5px;
+  background-color: #fffded;
+  text-align: center;
 }
 
 .list_other_user {
-  margin: 20px 30px 0 20px;
+  margin: 20px 5px 0 5px;
   padding: 10px;
   font-size: 18px;
-  color: #626343;
+  color: #00803d;
   font-family: 'M PLUS Rounded 1c';
+  text-align: center;
+
 }
 
 .other_users {
-  margin: 0 0 15px 20px;
+  margin: 0 10px 15px;
   font-size: 20px;
-  font-weight: 600;
-  color: #00803d;
+  font-weight: 800;
+  color: #fffded;
+  border: #00803d;
+  background-color: #00803d;
+  border-radius: 5px;
+  text-align: center;
   font-family: 'M PLUS Rounded 1c';
 }
 
 .other_user_nil {
   margin: 0 0 15px 30px;
   font-size: 15px;
-  color: #00803d;
+  color: #f4b2ba;
   font-family: 'M PLUS Rounded 1c';
 }
 .main_area_top{
@@ -164,4 +174,39 @@ background-color: #626343;
   border-radius: 5px;
   text-align: center;
   background-color: #beb098;
+}
+@media (max-width: 767.98px) {
+
+  .total_price {
+    width: calc(100vw - 250px);
+    text-align: center;
+    font-size: 20px;
+    font-family: "M PLUS Rounded 1c";
+    color: #626343;
+  }
+  
+  .prices {
+    margin: 0 10px;
+    font-size: 30px;
+    font-family: "M PLUS Rounded 1c";
+    font-weight: 900;
+    color: #f4b2ba;
+  }
+  
+  .prev_total_price{
+    width: calc(100vw - 250px);
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-family: "M PLUS Rounded 1c";
+    color: #626343;
+  }
+  
+  .prev_prices {
+    margin: 0 10px;
+    font-size: 20px;
+    font-family: "M PLUS Rounded 1c";
+    font-weight: 900;
+    color: #beb098;
+  }
 }
