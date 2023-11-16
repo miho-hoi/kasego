@@ -3,16 +3,16 @@
   <div class="side_bar_area">
     <ul class="lists">
     <% if user_signed_in? %>
-      <li class="list"><%= link_to "やること<br>リストを見る".html_safe, (to_dos_path) %></li>
-      <li class="list"><%= link_to "やることを<br>登録する".html_safe, (new_to_do_path) %></li>
-      <li class="list"><%= link_to "やったことを<br>記録する".html_safe, (new_record_path) %></li>
-      <li class="list"><%= link_to "今までの<br>記録を見る".html_safe, (payments_path) %></li>
-      <li class="list">みんなの<br>記録を見る</li>
+      <li class="list"><%= link_to "やること<br>リスト".html_safe, (to_dos_path) %></li>
+      <li class="list"><%= link_to "やることを<br>登録".html_safe, (new_to_do_path) %></li>
+      <li class="list"><%= link_to "やったことを<br>記録".html_safe, (new_record_path) %></li>
+      <li class="list"><%= link_to "今までの<br>合計金額".html_safe, (payments_path) %></li>
+      <li class="list_other_user"><みんなの記録></li>
     </ul>
       <div class="other_users_list">
       <% @user.each do |user| %>
         <% if user != current_user %>
-          <div class="other_users">・<%= link_to "#{user.nickname}さん", user_path(user) %></div>
+          <div class="other_users"><%= link_to "#{user.nickname}さん", user_path(user) %></div>
         <% elsif @user.count == 1 %>
           <div class="other_user_nil">他のユーザーは<br>いません</div>
         <% end %>
