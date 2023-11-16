@@ -11,48 +11,38 @@
     background: #f3f9fd;
     color: blue;
   }
-  .today {
-    
+
+  .current-month {
+    font-family: "M PLUS Rounded 1c";
   }
-  .past {}
-  .future {}
-  .start-date {}
-  .prev-month  {}
-  .next-month {}
-  .current-month {}
-  .has-events {}
-}
 
-.current-month {
-  font-family: "M PLUS Rounded 1c";
-}
+  .calendar-heading {
+    display: flex;
+    align-items: center;
+  }
 
-.calendar-heading {
-  display: flex;
-  align-items: center;
-}
+  .calendar_heading_month {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: "M PLUS Rounded 1c";
+    color: #626343;
+    margin-right: 30px;
+  }
 
-.calendar_heading_month {
-  font-size: 50px;
-  font-weight: 900;
-  font-family: "M PLUS Rounded 1c";
-  color: #626343;
-  margin-right: 30px;
-}
+  .month_select_btns {
+    display: flex;
+  }
 
-.month_select_btns {
-  display: flex;
-}
+  .month_select_btn {
+    background-color: #626343;
+    border-radius: 5px;
+    color: #ffeaea;
+    padding: 10px;
+    margin: 10px;
+  }
 
-.month_select_btn {
-  background-color: #626343;
-  border-radius: 5px;
-  color: #ffeaea;
-  padding: 10px;
-  margin: 10px;
+  thead {
+    background-color: #e2ecba;
+  }
+  
 }
-
-thead {
-  background-color: #e2ecba;
-}
-

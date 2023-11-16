@@ -5,7 +5,7 @@
   </div>
   <div class="main_area">
     <div class="main_area_top">
-      <div class="total_price"><%= @nickname %>さんの<%= @today_month %>月の合計金額は<span class="prices"><%=@user_total_prices_month %>円</span>です！
+      <div class="total_price"><%= "#{@nickname}さんの#{@today_month}月の合計金額は" %><span class="prices"><%=@user_total_prices_month %>円</span>です！
       </div>
     </div>
     <div class="calendar_area">
@@ -25,7 +25,7 @@
           <% if record.user_id == @user.id && record.date.month == @today_month %> 
           <div class="to_dos_record_date"><%= record.date.strftime('%m/%e') %></div>
           <div class="to_dos_record_content"><%= record.to_do.content %></div>
-          <div class="to_dos_record_price"><%= record.to_do.price %>円 x <%= record.times %>=<%= record.to_do.price * record.times %>円</div>
+          <div class="to_dos_record_price"><%= "#{record.to_do.price}円 x #{record.times} = #{record.to_do.price * record.times}円" %></div>
           <% end %>
       </div>
       <% end %>
