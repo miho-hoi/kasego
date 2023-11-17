@@ -5,7 +5,7 @@ class Record < ApplicationRecord
   validates :date,  presence: true
   validates :times, presence: true
 
-  validate :date_should_be_today
+  # validate :date_should_be_today
 
   private
 
