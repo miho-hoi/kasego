@@ -5,8 +5,9 @@
   <% else %>
     <% @payments.each do |payment| %>
       <div class="payment_list">
-        <div class="payment_content"><%= payment.date.strftime("%Y年%m月")  %></div>
-        <div class="payment_price"><%= payment.total_price %>円</div>
+        <div class="payment_date"><%= payment.date.strftime("%m/%e") %></div>
+        <div class="record_month"><%= "#{payment.date.prev_month.strftime("%Y年%m月")}" %></div>
+        <div class="payment_price"><%= "#{payment.total_price}円" %></div>
       </div>
     <% end %>
   <% end %>

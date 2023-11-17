@@ -21,19 +21,27 @@
   display: flex;
 }
 
-.payment_content {
-  width: 70%;
+.payment_date {
+  width: 20%;
   margin: 0 30px 10px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "M PLUS Rounded 1c";
   color: #626343;
 }
 
+.record_month {
+  width: 40%;
+  margin: 0 30px 10px;
+  font-size: 25px;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
 .payment_price {
   width: 30%;
   text-align: right;
   margin: 0 50px 10px;
   font-size: 30px;
+  font-weight: 600;
   font-family: "M PLUS Rounded 1c";
   color: #626343;
 }
