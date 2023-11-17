@@ -1,7 +1,8 @@
 <div class="form_wrap">
   <div class="form_header">
-    <h2 class="form_header_text">もらった合計金額を記録する</h2>
+    <h2 class="form_header_text">合計金額を記録する</h2>
   </div>
+  <p class="warning">記録すると元に戻せません<br>必ずおこづかいを受け取ってから記録してください</p>
   <%= form_with(model: @payment, local: true) do|f| %>
   <%= render 'shared/error_messages', model: f.object %>
   <%= alert %>

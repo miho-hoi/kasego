@@ -49,10 +49,12 @@
 }
 
 .other_user_nil {
-  margin: 0 0 15px 30px;
+  margin: 0 15px 0 10px;
   font-size: 15px;
-  color: #f4b2ba;
+  color: #626343;
   font-family: 'M PLUS Rounded 1c';
+  border: none;
+  text-align: center;
 }
 .main_area_top{
   width: fit-content;
@@ -60,7 +62,7 @@
   margin: 20px 0 0 20px;
 }
 
-.receipt {
+.receipt_message {
   width: calc(100vw - 250px);
   margin-bottom: 20px;
   text-align: center;
@@ -72,14 +74,14 @@
 .receipt_btn{
 width: fit-content;
 margin: 30px auto;
-padding: 5px;
+padding: 8px;
 font-size: 20px;
 font-family: "M PLUS Rounded 1c";
 color: #fffded;
 border: 1px none;
 border-radius: 5px;
 text-align: center;
-background-color: #626343;
+background-color: #e61639;
 }
 
 .greeting { 

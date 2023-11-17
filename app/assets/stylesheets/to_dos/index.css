@@ -2,7 +2,7 @@
   width: 600px;
   min-height: 400px;
   margin: 70px auto 30px;
-  border: 1px solid #626343;
+  border: 1px solid #00803d;
   background-color: #fffded;
 }
 
@@ -11,7 +11,7 @@
   font-size: 40px;
   font-family: "M PLUS Rounded 1c";
   color: #fffded;
-  background-color: #626343;
+  background-color: #00803d;
 }
 
 .to_do_list {
@@ -34,7 +34,7 @@
   margin: 0 30px 10px;
   font-size: 30px;
   font-family: "M PLUS Rounded 1c";
-  color: #f4b2ba;
+  color: #626343;
 }
 
 .edit_btn {

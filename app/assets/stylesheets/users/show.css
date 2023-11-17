@@ -17,8 +17,13 @@ margin-left: 5px;
 }
 
 .other_users_return_btn {
-  margin: 25px;
+  margin: 50px 25px;
+  padding: 5px;
   font-size: 20px;
-  color: #626343;
+  color: #fffded;
   font-family: 'M PLUS Rounded 1c';
+  border: none;
+  border-radius: 5px;
+  background-color: #68abc4;
+  text-align: center;
 }

@@ -1,7 +1,54 @@
+
+.payment_wrapper {
+  width: 600px;
+  min-height: 400px;
+  margin: 70px auto 30px;
+  border: 1px solid #00803d;
+  background-color: #fffded;
+}
+
+.payment_head {
+  text-align: center;
+  font-size: 40px;
+  font-family: "M PLUS Rounded 1c";
+  color: #fffded;
+  background-color: #00803d;
+}
+
+.payment_list {
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+}
+
+.payment_content {
+  width: 70%;
+  margin: 0 30px 10px;
+  font-size: 30px;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
+
+.payment_price {
+  width: 30%;
+  text-align: right;
+  margin: 0 50px 10px;
+  font-size: 30px;
+  font-family: "M PLUS Rounded 1c";
+  color: #626343;
+}
 .no_payment {
   text-align: center;
   margin: 30px;
   font-size: 30px;
   font-family: "M PLUS Rounded 1c";
   color: #f4b2ba;
+}
+
+.warning {
+  text-align: center;
+  margin: 30px;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+  color: #e61639;
 }

@@ -1,12 +1,12 @@
-<div class="to_do_wrapper">
-  <div class="to_do_head"><%= "#{current_user.nickname}さんの記録" %></div>
+<div class="payment_wrapper">
+  <div class="payment_head"><%= "#{current_user.nickname}さんの記録" %></div>
   <% if @payments.nil? || @payments.empty? %>
     <div class="no_payment">まだ記録はありません</div>
   <% else %>
     <% @payments.each do |payment| %>
-      <div class="to_do_list">
-        <div class="to_do_content"><%= payment.date.strftime("%Y年%m月")  %></div>
-        <div class="to_do_price"><%= payment.total_price %>円</div>
+      <div class="payment_list">
+        <div class="payment_content"><%= payment.date.strftime("%Y年%m月")  %></div>
+        <div class="payment_price"><%= payment.total_price %>円</div>
       </div>
     <% end %>
   <% end %>

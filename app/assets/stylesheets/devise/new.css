@@ -2,12 +2,12 @@
   width:600px;
   height: fit-content;
   margin: 50px auto 30px;
-  border: 1px solid #626343;
+  border: 1px solid #00803d;
 }
 
 .form_header {
   height: 50px;
-  background-color: #626343;
+  background-color: #00803d;
 }
 
 .form_header_text {
