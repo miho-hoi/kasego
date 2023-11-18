@@ -3,7 +3,7 @@ class PaymentsController < ApplicationController
   before_action :move_to_index, only: :new
 
   def index
-    @payments = current_user.payments
+    @payments = current_user.payments.order(date: "DESC").limit(6)
   end
 
   def new

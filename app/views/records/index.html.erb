@@ -32,7 +32,7 @@
       <div class="prev_total_price"><%= "#{@prev_month}月の合計金額は"%><span class="prev_prices"><%= @user_total_prices_prv_month %>円</span>でした</div>
         <div class="total_price"><%= "#{@today_month}月の合計金額は"%><span class="prices"><%= @user_total_prices_month %>円</span>です！</div>
       <% else %>
-        <div class="greeting">新規登録かログインをしてください</div>
+        <div class="greeting">ログインか新規登録をしてください</div>
       <% end %> 
     </div>
     <div class="calendar_area">
@@ -56,8 +56,10 @@
             <div class="to_dos_record_date"><%= record.date.strftime('%m/%e') %></div>
             <div class="to_dos_record_content"><%= record.to_do.content %></div>
             <div class="to_dos_record_price"><%= "#{record.to_do.price}円 x #{record.times} = #{record.to_do.price * record.times}円" %></div>
-            <div class="record_btn"><%= link_to "修正", edit_record_path(record.id) %></div>
-            <div class="record_btn"><%= link_to "削除", record_path(record.id),data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %></div>
+              <% if record.date == Date.today %>
+              <div class="record_btn"><%= link_to "修正", edit_record_path(record.id) %></div>
+              <div class="record_btn"><%= link_to "削除", record_path(record.id),data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %></div>
+              <% end %>
             <% end %>
         </div>
         <% end %>

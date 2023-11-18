@@ -6,11 +6,11 @@
     <%= render 'shared/error_messages', model: f.object %>
     <div class="field">
       <%= f.label :content %><br />
-      <div class="form_field"><%= f.text_field :content, autofocus: true, placeholder: "(例)ふろをわかす" %></div>
+      <div class="form_field" style="padding-left: 10px;"><%= f.text_field :content, autofocus: true, placeholder: "(例)ふろをわかす" %></div>
     </div>
     <div class="field">
       <%= f.label :price %><br />
-      <div class="form_field"><%= f.number_field :price, in: 10..1000, step: 10, style: "width:100%", placeholder: "金額を半角数字で入力してください" %></div>
+      <div class="form_field" style="padding-left: 10px;"><%= f.number_field :price, in: 10..1000, step: 10, style: "width:100%", placeholder: "金額を半角数字で入力してください" %></div>
     </div>
     <div class="actions">
       <%= f.submit "登録する" %>

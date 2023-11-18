@@ -1,5 +1,6 @@
 .to_do_wrapper {
-  width: 600px;
+  width: 40vw;
+  min-width: 400px;
   min-height: 400px;
   margin: 70px auto 30px;
   border: 1px solid #00803d;
@@ -21,27 +22,28 @@
 }
 
 .to_do_content {
-  width: 70%;
-  margin: 0 30px 10px;
-  font-size: 30px;
+  width: calc(60% - 50px);
+  margin-left: 20px;
+  font-size: 20px;
   font-family: "M PLUS Rounded 1c";
   color: #626343;
 }
 
 .to_do_price {
-  width: 30%;
+  width: calc(40% - 50px);
   text-align: right;
-  margin: 0 30px 10px;
-  font-size: 30px;
+  margin: 0 30px 10px 0;
+  font-size: 25px;
   font-family: "M PLUS Rounded 1c";
   color: #626343;
 }
 
 .edit_btn {
-  width: 100px;
-  margin: 0 10px 5px 0;
-  padding: 5px;
-  font-size: 20px;
+  width: 50px;
+  height: 30px;
+  padding-top: 5px;
+  margin-right: 10px;
+  font-size: 15px;
   font-family: "M PLUS Rounded 1c";
   color: #fffded;
   border: 1px none;

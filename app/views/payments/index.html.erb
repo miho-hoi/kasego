@@ -3,6 +3,11 @@
   <% if @payments.nil? || @payments.empty? %>
     <div class="no_payment">まだ記録はありません</div>
   <% else %>
+    <div class="payment_list">
+      <div class="payment_date_head">受取日</div>
+      <div class="record_month_head">実施年月</div>
+      <div class="payment_price_head">金額</div>
+    </div>
     <% @payments.each do |payment| %>
       <div class="payment_list">
         <div class="payment_date"><%= payment.date.strftime("%m/%e") %></div>

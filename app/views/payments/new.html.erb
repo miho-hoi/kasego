@@ -9,13 +9,13 @@
   <%= flash[:alert] %>
   <div class="field">
     <%= f.label :date %><br />
-    <div class="form_field">
+    <div class="form_field" style="padding-left: 10px;">
       <%= f.date_field :date, value: Date.today, readonly: true, style: "width:100%" %>
     </div>
   </div>
   <div class="field">
     <%= f.label :total_price %><br />
-    <div class="form_field" style="white-space: nowrap;">
+    <div class="form_field" style="white-space: nowrap; padding-left: 10px;">
       <%= f.number_field :total_price, value: @user_total_prices_prv_month, readonly: true, style: "width:100%" %>円
     </div>
     <div class="actions">
