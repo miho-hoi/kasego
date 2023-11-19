@@ -4,13 +4,15 @@ class RecordsController < ApplicationController
 
   def index
     @user = User.all
+    @today = Date.today
     @today_month = Date.today.month
     @prev_month = Date.today.prev_month.month
     @payments = Payment.all
     if user_signed_in?
-      @user_total_prices_month = current_user.records.joins(:to_do).where('EXTRACT(MONTH FROM records.date) = ?', @today_month).sum('to_dos.price * times')
-      @user_total_prices_prv_month = current_user.records.joins(:to_do).where('EXTRACT(MONTH FROM records.date) = ?', @prev_month).sum('to_dos.price * times')
+      @user_total_prices_month = current_user.records.includes(:to_do).where('EXTRACT(MONTH FROM records.date) = ?', @today_month).sum('to_dos.price * times')
+      @user_total_prices_prv_month = current_user.records.includes(:to_do).where('EXTRACT(MONTH FROM records.date) = ?', @prev_month).sum('to_dos.price * times')
       @records = current_user.records.where("EXTRACT(MONTH FROM date) = ?", @today_month).order(date: "DESC")
+      @payment_record = current_user.payments.where(date: Date.today.beginning_of_month..Date.today.end_of_month)
     else
       @user_total_prices_month = {}
       @to_dos = {}
