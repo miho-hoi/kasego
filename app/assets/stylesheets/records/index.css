@@ -56,6 +56,7 @@
   border: none;
   text-align: center;
 }
+
 .main_area_top{
   width: fit-content;
   height: fit-content;
@@ -130,11 +131,12 @@ background-color: #e61639;
 }
 
 .calendar_area {
-  width: 80vw;
-  margin: 50px;
+  width: calc(80vw - 50px);
+  margin-left: 50px;
 }
 
 .total_price_by_date {
+  margin-top: 10px;
   font-size: 20px;
   color: #626343;
   text-align: center;
@@ -163,7 +165,7 @@ background-color: #e61639;
 }
 
 .to_dos_record_price{
-  width: 20vw;
+  width: 30vw;
 }
 
 .record_btn {
@@ -177,7 +179,61 @@ background-color: #e61639;
   text-align: center;
   background-color: #beb098;
 }
-@media (max-width: 767.98px) {
+/* タブレット表示時 */
+@media (max-width: 768px) {
+
+  .side_bar_area {
+    width: 20vw;
+    min-height: 700px;
+    background-color: #cee7d7;
+  }
+  
+  .lists {
+   padding-top: 15px;
+  }
+  
+  .list {
+    margin: 10px 15px 0 20px;
+    padding: 5px;
+    font-size: 10px;
+    color: #00803d;
+    font-family: 'M PLUS Rounded 1c';
+    border: 1px ;
+    border-radius: 5px;
+    background-color: #fffded;
+    text-align: center;
+  }
+  
+  .list_other_user {
+    margin: 10px 5px 0 5px;
+    padding: 10px;
+    font-size: 10px;
+    color: #00803d;
+    font-family: 'M PLUS Rounded 1c';
+    text-align: center;
+  
+  }
+  
+  .other_users {
+    margin: 0 10px 15px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #fffded;
+    border: #00803d;
+    background-color: #00803d;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c';
+  }
+  
+  .other_user_nil {
+    margin: 0 15px 0 10px;
+    font-size: 10px;
+    color: #626343;
+    font-family: 'M PLUS Rounded 1c';
+    border: none;
+    text-align: center;
+  }
 
   .total_price {
     width: calc(100vw - 250px);
@@ -189,9 +245,9 @@ background-color: #e61639;
   
   .prices {
     margin: 0 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "M PLUS Rounded 1c";
-    font-weight: 900;
+    font-weight: 600;
     color: #f4b2ba;
   }
   
@@ -210,5 +266,42 @@ background-color: #e61639;
     font-family: "M PLUS Rounded 1c";
     font-weight: 900;
     color: #beb098;
+  }
+
+  .total_price_by_date {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #626343;
+    text-align: center;
+  }
+  .to-dos_records_wrapper {
+    margin: 20px 50px;
+    font-size: 15px;
+    font-family: "M PLUS Rounded 1c";
+    color: #626343;
+  }
+
+  .to_dos_record_date {
+    width: 10vw;
+  }
+  
+  .to_dos_record_content {
+    width: 25vw;
+  }
+  
+  .to_dos_record_price{
+    width: 25vw;
+  }
+  
+  .record_btn {
+    width: 5vw;
+    margin: 0 10px 5px 0;
+    font-size: 8px;
+    font-family: "M PLUS Rounded 1c";
+    color: #fffded;
+    border: 1px none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #beb098;
   }
 }

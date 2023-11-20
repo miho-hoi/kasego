@@ -47,7 +47,7 @@
 }
 
 /* タブレット表示時 */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
 
   .logo > a {
     font-size: 40px;
