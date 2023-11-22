@@ -1,6 +1,7 @@
 .simple-calendar {
   .day {
     color: #626343;
+    font-family: "M PLUS Rounded 1c";
   }
   .wday-0 {
     background: #fdf5f9;

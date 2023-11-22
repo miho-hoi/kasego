@@ -4,7 +4,7 @@
   <div class="header_right">
     <% if user_signed_in? %>
       <div class="header_right_button">
-        <span class="nickname"><%= current_user.nickname %></span>
+        <span class="nickname"><%= current_user.nickname %>さん</span>
         <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
       </div>
     <% else %>
